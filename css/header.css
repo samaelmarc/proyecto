@@ -1,0 +1,101 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  
+  
+  }
+  p{
+    color: #222;
+  
+  }
+  
+  .container__box {
+    position: relative;
+    width: 1000px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin: auto;
+    margin-bottom: 4rem;
+    display: flex;
+    align-items: center;
+    background: #222;
+  }
+  .container__box .box {
+    position: relative;
+    height: 56rem;
+    background: #fff;
+    display: flex;
+    width: 47%;
+    margin: 40px 25px;
+    margin-right: auto;
+    justify-content: space-evenly;
+  }
+  .container__box .box .imgbx {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #333;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: 0.5s ease-in-out;
+  }
+  .container__box .box:hover .imgbx {
+    width: 15rem;
+    height: 20rem;
+    left: -75px;
+    top: calc(50% - 75px);
+    transition: 0.5s ease-in-out;
+    background: #ff0057;
+  }
+  .container__box .box .imgbx:before {
+    content: attr(data-text);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 2em;
+    color: rgba(255, 255, 255, 0.05);
+    font-weight: 700;
+  }
+  .container__box .box .imgbx img {
+   
+    max-width: auto;
+    transition: 0.5s ease-in-out;
+  }
+  .container__box .box:hover .imgbx img {
+    max-width: 16rem;
+  }
+  .container__box .box .contentt {
+    position: absolute;
+    right: 0;
+    width: calc(100% - 75px);
+    height: 100%;
+    padding: 1rem 1rem 1rem 7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .container__box .box .contentt .h
+   {
+     margin-bottom: 5px;
+     font-size: 24px;
+  }
+  
+  .container__box .box .contentt a{
+  
+    display: inline-block;
+    margin-top: 10px;
+    padding: 5px 10px;
+    background: #333;
+    text-decoration: none;
+    color: #fff;
+  }

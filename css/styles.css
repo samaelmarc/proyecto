@@ -1,0 +1,271 @@
+
+
+
+
+
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+:root {
+  --rojo: #e50914;
+  --fondo: #2c2c2c;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+
+body {
+  background: var(--fondo);
+  background-image: url("../images/fondo_hero2.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  font-family: "Open Sans", sans-serif;
+}
+section{
+    margin-left: 10%;
+}
+.main {
+  display: flex;
+  min-height: calc(100vh - 60px);
+}
+/*footer*/
+footer{
+  width: 100%;
+  background: #202020;
+  color: white;   
+  font-size: small;
+  
+}
+
+.footer{
+  max-width: 1200px;
+  margin:10% auto;
+  display: flex;
+  justify-content: space-between;  
+  padding: 20px;
+}
+/*nav*/
+.navbar{
+    background-color: #fff;
+    height: 80px;
+    margin: 20px;
+    border-radius:16px ;
+    padding: 0.5rem;
+    margin: 3rem;
+}
+.navbar-brand{
+    font-weight: 500;
+    color: #009970;
+    font-size: 24px;
+    transition: 0.3s color;
+}
+.login-button{
+    background-color: #009970;
+    color: #fff;
+    font-size: 14px;
+    padding: 8px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: 0.3s background-color;
+    margin: 0.5rem;
+}
+.login-button:hover{
+    background-color: #00b383;
+}
+.navbar-toggler{
+    border:none;
+    font-size: 1.25rem;
+}
+.navbar-toggler:focus, .btn-close:focus{
+    box-shadow: none;
+    outline: none;
+}
+.nav-link{
+    color: #666777;
+    font-weight: 500;
+    position: relative;
+}
+.nav-link:hover, .nav-link.active{
+    color: #000;
+}
+@media(min-width:991px){
+    .nav-link:before{
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        height: 2px;
+        background-color: #009970;
+        visibility: hidden;
+        transition: 0.3s ease-in-out;
+    }
+    .nav-link:hover::before, .nav-link.active::before{
+        width: 100%;
+        visibility: visible;
+    }
+}
+
+/*
+.hero-section{
+    background: url(./images/fondo_hero2.jpg) no-repeat center;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+}
+.hero-section::before{
+    background-color: rgba(0,0,0,0.6);
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+}
+.hero-section .container{
+    height: 100vh;
+    z-index: 1;
+    position: relative;
+}*/
+/*------*/
+
+
+
+
+/* ---- ----- ----- Contenedor Titulo y Controles ----- ----- ----- */
+.contenedor-titulo-controles {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+
+.contenedor-titulo-controles h3 {
+  color: #fff;
+  font-size: 30px;
+}
+
+.contenedor-titulo-controles .indicadores button {
+  background: #fff;
+  height: 3px;
+  width: 10px;
+  cursor: pointer;
+  border: none;
+  margin-right: 2px;
+}
+
+.contenedor-titulo-controles .indicadores button:hover,
+.contenedor-titulo-controles .indicadores button.activo {
+  background: red;
+}
+
+/* ---- ----- ----- Contenedor Principal y Flechas ----- ----- ----- */
+.ramos-recomendadas {
+  margin: 10rem;
+}
+
+.ramos-recomendadas .contenedor-principal {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.ramos-recomendadas .contenedor-principal .flecha-izquierda,
+.ramos-recomendadas .contenedor-principal .flecha-derecha {
+  position: absolute;
+  border: none;
+  background: rgba(0, 0, 0, 0.3);
+  font-size: 40px;
+  height: 50%;
+  top: calc(50% - 25%);
+  line-height: 40px;
+  width: 50px;
+  color: #fff;
+  cursor: pointer;
+  z-index: 500;
+  transition: 0.2s ease all;
+}
+
+.ramos-recomendadas .contenedor-principal .flecha-izquierda:hover,
+.ramos-recomendadas .contenedor-principal .flecha-derecha:hover {
+  background: rgba(0, 0, 0, 0.9);
+}
+
+.ramos-recomendadas .contenedor-principal .flecha-izquierda {
+  left: 0;
+}
+
+.ramos-recomendadas .contenedor-principal .flecha-derecha {
+  right: 0;
+}
+
+/* ---- ----- ----- Carousel ----- ----- ----- */
+.ramos-recomendadas .contenedor-carouse-ramos {
+  width: 100%;
+  padding: 20px 0;
+  overflow: hidden;
+  scroll-behavior: smooth;
+}
+
+.ramos-recomendadas .contenedor-carouse-ramos .carousel {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.ramos-recomendadas .contenedor-carouse-ramos .carousel .ramo {
+  min-width: 20%;
+  transition: 0.3s ease all;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.ramos-recomendadas .contenedor-carouse-ramos .carousel .ramo.hover {
+  transform: scale(1.2);
+  transform-origin: center;
+}
+
+.ramos-recomendadas .contenedor-carouse-ramos .carousel .ramo img {
+  width: 100%;
+  vertical-align: top;
+}
+
+/* ---- ----- ----- Media Queries ----- ----- ----- */
+@media screen and (max-width: 800px) {
+  header .logotipo {
+    margin-bottom: 10px;
+    font-size: 30px;
+  }
+
+  header .contenedor {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .pelicula-principal {
+    font-size: 14px;
+  }
+
+  .pelicula-principal .descripcion {
+    max-width: 100%;
+  }
+
+  .ramos-recomendadas .contenedor-carousel {
+    overflow: visible;
+  }
+
+  .ramos-recomendadas .contenedor-carousel .carousel {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .ramos-recomendadas .indicadores,
+  .ramos-recomendadas .flecha-izquierda,
+  .ramos-recomendadas .flecha-derecha {
+    display: none;
+  }
+}
